@@ -1,0 +1,597 @@
+
+/* Estilos del Header */
+header {
+    background-image: url('https://i.postimg.cc/RFmqdN5H/realfondo-N.jpg');
+    background-size: cover; /* Cubre todo el área */
+    background-repeat: no-repeat; /* Evita la repetición */
+    background-position: center; /* Centra la imagen */
+    height: 55rem;
+    justify-content: center; /* Centra horizontalmente */
+    position: relative; /* Permite la superposición de elementos */
+    z-index: 1; /* Asegura que esté en frente del fondo */
+    color: white; /* Color del texto en blanco */
+    box-shadow: 0px 4px 10px 10px rgba(255, 255, 255, 0.5);;
+}
+
+/* Superposición del fondo para oscurecer */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Oscurece el fondo */
+    z-index: -1; /* Coloca detrás del contenido */
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    background-color: black;
+}
+
+/* Estilo del contenedor principal */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 2; /* Asegura que esté por encima del overlay */
+}
+
+.container2{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2; /* Asegura que esté por encima del overlay */
+}
+
+/* Logo de Netflix */
+.netflix-logo img {
+    width: 180px;
+    height: auto;
+}
+
+/* Estilos de la parte derecha del encabezado */
+.derecha {
+    display: flex;
+    align-items: start;
+    gap: 20px; /* Espaciado entre elementos */
+}
+
+#lenguaje {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #fff;
+    color: white;
+    width: 95px;
+    font-size: 1rem;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 25px;
+}
+
+#IniciarSesion {
+    background-color: #ce050f;
+    color: white;
+    height: 30px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    padding: 10px 1px;
+    font-size: 13px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none; /* Elimina el subrayado */
+    transition: background-color 0.3s;
+    margin-top: 25px;
+}
+
+#IniciarSesion:hover {
+    background-color: #ac070f;
+}
+
+.container3{
+    margin-top: 18rem;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+
+h1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 400%;
+    font-weight: bold;
+    text-align: center;
+}
+
+h5{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 120%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.texto2-p{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.email-container{
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .container2 {
+        /* flex-direction: column; */
+        gap: 10px;
+    }
+  
+    #IniciarSesion{
+        text-align: center;
+    }  
+    #lenguaje{
+        width: 41px;
+    }
+}
+
+.input-group {
+    display: flex;
+    width: 100%;
+}
+
+#email{
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    height: 50px;
+    width: 21rem;
+    color: white;
+    border: 1px solid #8c8c8c;
+    background-color: rgba(0, 0, 0, 0.5);  /*rgba(0, 0, 0, 0.5): Los primeros tres valores 0, 0, 0 representan el color negro en formato RGB. El cuarto valor 0.5 es el nivel de opacidad (50% transparente).*/
+    border-radius: 2px 0 0 2px;
+    outline: none;
+}
+
+#email::placeholder {
+    color: #8c8c8c;
+}
+
+#Comenzar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    padding: 10px 20px;
+    font-size: 25px;
+    color: #fff;
+    background-color: #ce050f;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#Comenzar:hover {
+    background-color: #ac070f;
+}
+
+@media (max-width: 768px) {
+    .input-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #email {
+        border-radius: 2px;
+        margin-bottom: 10px;
+    }
+
+    #Comenzar {
+        border-radius: 4px;
+    }
+}
+
+@media (min-width:481px) and (max-width: 768px) {
+    .container3{
+        margin-top: 7rem;
+        margin-left: 20px;
+        margin-right: 20px;
+    }   
+
+    .titulo-p{
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .texto-p{
+        font-size: 15px;
+    }
+
+    .texto2-p{
+        font-size: 15px ;
+    }
+}
+@media (max-width: 480px) {
+
+    .container3{
+        margin-top: 2rem;
+        margin-left: 50px;
+        margin-right: 20px;
+        padding: 20px;
+    }   
+
+    .titulo{
+        font-size: 5px;
+    }
+
+    .texto{
+        font-size: 5px;
+    }
+
+    .texto2{
+        font-size: 5px;
+    }
+}
+
+
+.container-tendecia{
+    width: 50%;
+}
+
+#tendencias{
+    margin-left: 8rem;
+    margin-top: 3rem;
+}
+
+#Pais{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #fff;
+    color: white;
+    font-size: 1rem;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 25px;
+    margin-left: 6rem;
+}
+
+#peli-serie{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #fff;
+    color: white;
+    font-size: 1rem;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+.container-peliculas{
+    height: 18rem;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.poster-wrapper {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 90%;
+    height: 100%;
+}
+
+.poster {
+    position: relative;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 85%;
+    width: 11rem;
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 0 0 auto;
+    transition: transform 0.3s ease; 
+}
+
+.poster:hover {
+    transform: scale(1.05);
+}
+
+
+.btn-left, .btn-right {
+    background-color: #2e2c2c;
+    color: white;
+    border: 0;
+    width: 26px;
+    padding: 1px;
+    height: 120px;
+    border-radius: 7px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.ranking {
+    position: absolute;
+    bottom: 10px; 
+    left: -15px;
+    font-size: 6rem; /* Tamaño del número */
+    font-weight: bold; /* Negrita para el número */
+    color: black;
+    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff; /* Borde blanco con sombra */
+}
+
+.btn-left:hover {
+    background-color: #413f3f;
+}
+
+.btn-right:hover {
+    background-color: #413f3f;
+}
+
+.btn-left {
+    left: 0;
+    margin-left: 120px;
+    margin-right: 5px;
+}
+
+.btn-right {
+    right: 0;
+    margin-right: 120px;
+    margin-left: 5px;
+}
+
+@media (max-width: 1000px) {
+    #tendencias{
+        font-size: 22px;
+    }
+    .container-peliculas{
+        margin-top: 5px;
+        height: 16rem;
+    }
+
+    .poster {
+        width: 8rem;
+        height: 70%;
+    }
+
+    .ranking {
+        font-size: 4rem;
+    }
+
+    .btn-left, .btn-right {
+        height: 100px;
+    }
+
+    .btn-left {
+        left: 0;
+        margin-left: 20px;
+    }
+    
+    .btn-right {
+        right: 0;
+        margin-right: 20px;
+    }
+}
+
+
+
+
+
+
+/*Motivos*/
+
+#motivos{
+    margin-top: 3rem;
+    margin-left: 7rem;
+}
+
+.container-motivos {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.caja-motivos {
+    background: linear-gradient(135deg, #40284b, #1a0e2e); /* Fondo degradado */
+    height: 18rem;
+    width: 24rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 10px;
+    padding: 1rem;
+    position: relative; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); 
+    color: white; 
+}
+
+.caja-motivos h5 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    font-size: 180%;
+}
+
+.caja-motivos p {
+    margin: 0 0 2.5rem 0;
+    font-size: 1rem;
+    font-size: 100%;
+}
+
+.icono {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+@media (min-width:1001px) and (max-width: 1700px) {
+    .caja-motivos{
+        width: 21rem;
+        height: 16rem;
+        font-size: 15px;
+    }
+
+}
+
+
+
+@media (max-width: 1000px) {
+    .caja-motivos{
+        width: 100%;
+        height: 13rem;
+    }
+
+}
+
+
+.container-pf {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    font-size: medium;
+}
+.margin{
+    border-top: 8px solid rgb(50, 50, 50);
+    border-bottom: 8px solid rgb(50, 50, 50);
+
+}
+.titulo-pf{
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 25px;
+    font-size: 50px;
+    font-weight:bold;
+
+}
+.accordion-body {
+    background-color:rgb(30, 30, 30);
+    color: white;
+    border: 8px black;
+    margin-block-start: 8px;
+    font-size: 20px;
+    
+}
+.accordion-item {
+    border: 8px black;
+    margin-block-start: 8px;
+        
+}
+
+.accordion-button  {
+    background-color: rgb(50, 50, 50);
+    color: white;
+    padding: 25px;
+    font-size: 25px;
+
+}
+.parrafoAcordeon {
+    background-color: black;
+    color: white;
+    font-size:larger;
+    text-align:center;
+    padding-top: 30px;
+    
+}
+.text{
+    background-color: black;
+    color: white;
+    text-align:center;
+    padding-block-end:  50px;
+}
+
+a:visited {
+    color: white;
+    
+}
+a:link{
+   
+    color: white;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#accordionFlushExample{
+    margin-left: 100px;
+    margin-right: 100px
+
+}
+
+
+
+
+.footer{
+    
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    font-size: medium;
+    justify-content: center;
+
+}
+.parrafofooter {
+    background-color: black;
+    color: white;
+    padding-top: 50px;
+    padding-left: 160px;
+    font-size: medium;
+    text-align:left;
+    
+}
+.caja{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin: 5px;
+    width: 250px;
+    height: auto;
+}
+
+.text2 {
+    background-color: black;
+    color: white;
+    padding-top: 5px;
+    padding-left: 160px;
+    font-size: medium;
+    text-align:left;
+    
+}
+.input2 {
+    background-color: black;
+    border: 2px solid rgb(50, 50, 50);
+    border-radius: 2px;
+    padding: 5px;
+    width: 100px;
+    height: 25px;
+}  
+
+
